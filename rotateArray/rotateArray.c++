@@ -9,23 +9,23 @@ void rotateArray( std::vector<int> vector, int k );
 int main()
 {
 
-std::vector<int> sampleVector = {1,2,3,4,5,6,7};
-int k = 3; 
+std::vector<int> sampleVector = {1,2,3,4,5,6,7}; // Here you can input any array of numbers and rotate them k units!
+int k = 4; 
 
 rotateArray(sampleVector,k);
 
-
-
-
-
-
-    
 }
 
 void rotateArray( std::vector<int> vector, int k ){
     int size = vector.size() ;
+     std::vector<int> answerVector;
 
-    std::vector<int> answerVector = {0,0,0,0,0,0,0};
+
+    for(int i=0;i<size;i++)
+    {
+        answerVector.push_back(0);
+    }
+   
    
     for(int i=0;i<size;i++){
 
@@ -39,12 +39,12 @@ void rotateArray( std::vector<int> vector, int k ){
        
          
         answerVector[newIndex] = element;
-        // std::cout << answerVector[i] << std::endl;
+       
     }
 
     for(int i=0;i<size;i++){
 
-        std::cout << answerVector[i] << std::endl;
+        std::cout << answerVector[i]; // Outputs the Completed Vector
     }
 }
 
